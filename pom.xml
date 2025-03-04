@@ -14,7 +14,7 @@
       <spring.boot-version>3.3.6</spring.boot-version>
       <camel.spring.boot-version>4.8.0.redhat-00022</camel.spring.boot-version>
       <surefire.plugin.version>3.0.0-M4</surefire.plugin.version>
-      <java.version>17</java.version>
+      <java.version>21</java.version>
       <maven.compiler.source>${java.version}</maven.compiler.source>
       <maven.compiler.target>${java.version}</maven.compiler.target>
       <apicurio-registry-maven-plugin.version>2.6.4.Final</apicurio-registry-maven-plugin.version>
@@ -65,13 +65,13 @@
         <groupId>org.apache.camel.springboot</groupId>
         <artifactId>camel-platform-http-starter</artifactId>
       </dependency>
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-undertow-starter</artifactId>
+        </dependency>
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
         <artifactId>camel-rest-openapi-starter</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.camel.springboot</groupId>
-        <artifactId>camel-yaml-dsl-starter</artifactId>
       </dependency>
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
@@ -107,13 +107,6 @@
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
         <artifactId>camel-management-starter</artifactId>
-      </dependency>
-      <!--
-      This dependency is required for viewing Camel routes source XML.
-      -->
-      <dependency>
-        <groupId>org.apache.camel.springboot</groupId>
-        <artifactId>camel-spring-boot-xml-starter</artifactId>
       </dependency>
       <!--
       To enable Camel plugin debugging feature, add this dependency.
@@ -194,9 +187,6 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <configuration>
-            <release>${java.version}</release>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.springframework.boot</groupId>
