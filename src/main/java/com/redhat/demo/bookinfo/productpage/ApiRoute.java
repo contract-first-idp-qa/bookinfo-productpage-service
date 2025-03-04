@@ -23,12 +23,10 @@ public class ApiRoute extends RouteBuilder {
 
         
         rest().openApi().specification("productpage-api.json").missingOperation("ignore");
-        
 
-        
         from("direct:sampleOperationId")
                 .removeHeaders("*")
-                .to("rest-openapi:details-api.json#getProductDetails?host={{openapi.client.details.host}}");
+                .to("rest-openapi:details-api.json#getProduct?host={{openapi.client.details.host}}");
         
 
     }
