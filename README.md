@@ -1,3 +1,3 @@
 # Product Page Service
 
-Built with Camel on Spring Boot
+Built with Camel (Java DSL) on Spring Boot
