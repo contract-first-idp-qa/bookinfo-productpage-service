@@ -1,10 +1,9 @@
 package com.redhat.demo.bookinfo.productpage;
 
+import org.apache.camel.opentelemetry.starter.CamelOpenTelemetry;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.FullyQualifiedAnnotationBeanNameGenerator;
 
 @CamelOpenTelemetry
